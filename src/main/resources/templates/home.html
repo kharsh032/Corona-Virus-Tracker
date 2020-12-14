@@ -11,7 +11,7 @@
 <body>
 <div class="container">
     <h1>Coronavirus Tracker Application</h1>
-    <p>This application lists the current number of cases reported across the globe</p>
+    <p>This application lists the current number of cases reported across the globe.</p>
 
     <div class="jumbotron">
         <h1 class="display-4" th:text="${totalReportedCases}"></h1>
@@ -22,10 +22,10 @@
         <tr>
             <th>State</th>
             <th>Country</th>
-            <th>Total Cases reported</th>
-            <th>Recovered Cases</th>
-            <th>Death Cases</th>
-            <th>Active Cases</th>
+            <th>Total cases reported</th>
+            <th>Recovered cases</th>
+            <th>Death cases</th>
+            <th>Active cases</th>
         </tr>
         <tr th:each="locationStat : ${locationStats}">
             <td th:text="${locationStat.state}"></td>
