@@ -29,7 +29,7 @@ public class CoronaVirusDataService {
     public CoronaVirusDataService(RestTemplateBuilder restTemplateBuilder) {
         restTemplate = restTemplateBuilder.build();
     }
-    private static final String VIRUS_DATA_URL ="https://covid19.mathdro.id/api/recovered";
+    private static final String VIRUS_DATA_URL ="https://covid19.mathdro.id/api/deaths";
     private List<LocationStat> allStats=new ArrayList<>();
 
     public List<LocationStat> getAllStats()
