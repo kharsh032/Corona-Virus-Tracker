@@ -41,15 +41,12 @@ public class CoronaVirusDataService {
     public void fetchVirusData() throws IOException,InterruptedException{
         try
         {
-        URI uri;
-        uri = new URI(VIRUS_DATA_URL);
+       URI uri = new URI(VIRUS_DATA_URL);
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
         headers.setAccept(Collections.singletonList(MediaType.APPLICATION_JSON));
-        HttpEntity<String> request = new HttpEntity<String>(headers);
-        ResponseEntity<String> totalEntity = restTemplate.exchange(uri, HttpMethod.GET, request,String.class);
-        String result = totalEntity.getBody();
-        JSONArray ja = new JSONArray(result);
+        HttpEntity<String> request = new HttpEntity<>(headers);
+        JSONArray ja = restTemplate.getForObject(uri, JSONArray.class);
 
         int n=ja.length();
         for(int i=0;i<n;i++)
