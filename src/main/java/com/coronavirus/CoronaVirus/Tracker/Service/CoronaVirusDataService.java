@@ -2,7 +2,6 @@ package com.coronavirus.CoronaVirus.Tracker.Service;
 
 import com.coronavirus.CoronaVirus.Tracker.Model.LocationStat;
 import com.fasterxml.jackson.databind.util.JSONPObject;
-import com.sun.deploy.net.HttpResponse;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONArray;
 import org.json.JSONException;
