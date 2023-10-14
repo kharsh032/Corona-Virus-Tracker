@@ -68,13 +68,13 @@ public class CoronaVirusDataService {
             throw new RuntimeException("Error occured");
         }
         finally {
-           this.allStats = newStat;
-           for(LocationStat lo:allStats)
-           {
-               System.out.println(lo.getCountry());
-               System.out.println(lo.getState());
-               System.out.println(lo.getCurrentActiveCases());
-           }
+//           this.allStats = newStat;
+//           for(LocationStat lo:allStats)
+//           {
+//               System.out.println(lo.getCountry());
+//               System.out.println(lo.getState());
+//               System.out.println(lo.getCurrentActiveCases());
+//           }
         }
     }
 }
