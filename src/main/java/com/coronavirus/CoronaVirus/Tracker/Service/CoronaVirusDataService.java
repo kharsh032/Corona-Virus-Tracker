@@ -12,6 +12,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import sun.net.www.http.HttpClient;
+import lombok.extern.slf4j.Slf4j;
 
 import javax.annotation.PostConstruct;
 import java.io.IOException;
@@ -22,6 +23,7 @@ import java.util.List;
 import java.net.URI;
 
 @Service
+@Slf4j
 public class CoronaVirusDataService {
 
     RestTemplate restTemplate;
