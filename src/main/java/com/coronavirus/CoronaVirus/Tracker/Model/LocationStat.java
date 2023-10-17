@@ -3,8 +3,7 @@ package com.coronavirus.CoronaVirus.Tracker.Model;
 import lombok.*;
 
 @Builder
-@Getter
-@Setter
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class LocationStat {
