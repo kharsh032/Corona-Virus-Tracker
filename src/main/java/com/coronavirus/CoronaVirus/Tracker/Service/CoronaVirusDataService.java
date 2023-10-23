@@ -74,13 +74,7 @@ public class CoronaVirusDataService {
             throw new RuntimeException("Error occured while fetching data from tracker");
         }
         finally {
-//           this.allStats = newStat;
-//           for(LocationStat lo:allStats)
-//           {
-//               System.out.println(lo.getCountry());
-//               System.out.println(lo.getState());
-//               System.out.println(lo.getCurrentActiveCases());
-//           }
+            //TODO: to be used when making DB calls to close connections
         }
     }
 }
