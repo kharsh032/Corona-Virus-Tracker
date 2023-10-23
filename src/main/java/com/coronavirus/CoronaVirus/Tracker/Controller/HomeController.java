@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @Controller
+@Slf4j
 @RequestMapping(value = "/coronavirus")
 public class HomeController {
 
@@ -27,6 +28,7 @@ public class HomeController {
         model.addAttribute("locationStats", allStats);
         model.addAttribute("totalReportedCases", totalReportedCases);
         model.addAttribute("totalNewCases", totalNewCases);
-        return "home";
+        log.info("Total Reported Cases = {}",totalReportedCases);
+        return "Data fetched successfully";
     }
 }
