@@ -19,7 +19,7 @@ public class HomeController {
     CoronaVirusDataService coronaVirusDataService;
 
     @GetMapping("/")
-    public String home(Model model)
+    public String getAllStatsForCoronaVirus(Model model)
     {
         List<LocationStat> allStats = coronaVirusDataService.getAllStats();
         int totalReportedCases = allStats.stream().mapToInt(stat -> stat.getCurrentActiveCases()).sum();
