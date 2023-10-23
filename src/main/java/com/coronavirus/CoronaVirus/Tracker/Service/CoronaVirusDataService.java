@@ -22,6 +22,7 @@ import java.util.List;
 import java.net.URI;
 
 @Service
+@Slf4j
 public class CoronaVirusDataService {
 
     RestTemplate restTemplate;
@@ -69,7 +70,7 @@ public class CoronaVirusDataService {
         }
         catch (URISyntaxException | JSONException e)
         {
-       // e.printStackTrace();
+             log.error("Exception occured = {}",e);
             throw new RuntimeException("Error occured while fetching data from tracker");
         }
         finally {
