@@ -2,6 +2,7 @@ package com.coronavirus.CoronaVirus.Tracker.Controller;
 
 import com.coronavirus.CoronaVirus.Tracker.Model.LocationStat;
 import com.coronavirus.CoronaVirus.Tracker.Service.CoronaVirusDataService;
+import com.coronavirus.CoronaVirus.Tracker.constants.AppConstants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -25,9 +26,9 @@ public class HomeController {
         List<LocationStat> allStats = coronaVirusDataService.getAllStats();
         int totalReportedCases = allStats.stream().mapToInt(stat -> stat.getCurrentActiveCases()).sum();
         int totalNewCases = allStats.stream().mapToInt(stat -> stat.getLatestTotalCases()).sum();
-        model.addAttribute("locationStats", allStats);
-        model.addAttribute("totalReportedCases", totalReportedCases);
-        model.addAttribute("totalNewCases", totalNewCases);
+        model.addAttribute(AppConstants.LOCATION_STATS, allStats);
+        model.addAttribute(AppConstants.TOTAL_REPORTED_CASES, totalReportedCases);
+        model.addAttribute(AppConstants.TOTAL_NEW_CASES, totalNewCases);
         log.info("Total Reported Cases = {}",totalReportedCases);
         return "Data fetched successfully";
     }
