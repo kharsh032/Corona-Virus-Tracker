@@ -5,7 +5,6 @@ import lombok.*;
 @Builder
 @Data
 @AllArgsConstructor
-@NoArgsConstructor
 public class LocationStat {
     private String state;
     private String country;
