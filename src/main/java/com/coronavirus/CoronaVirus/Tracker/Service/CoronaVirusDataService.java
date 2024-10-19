@@ -2,7 +2,8 @@ package com.coronavirus.CoronaVirus.Tracker.Service;
 
 import com.coronavirus.CoronaVirus.Tracker.Model.LocationStat;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.boot.web.client.RestTemplateBuilder;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -15,13 +16,11 @@ import java.util.List;
 @Slf4j
 public class CoronaVirusDataService {
 
-    private final RestTemplate restTemplate;
     private static final String VIRUS_DATA_URL = "https://covid19.mathdro.id/api/deaths";
     private List<LocationStat> allStats = new ArrayList<>();
 
-    public CoronaVirusDataService(RestTemplateBuilder restTemplateBuilder) {
-        restTemplate = restTemplateBuilder.build();
-    }
+    @Autowired
+    private RestTemplate restTemplate;
 
     public List<LocationStat> getAllStats() {
         return allStats;
