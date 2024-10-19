@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 
-@Controller
+@RestController
 @Slf4j
 @RequestMapping("/coronavirus") 
 public class HomeController {
@@ -30,6 +30,6 @@ public class HomeController {
         model.addAttribute("totalNewCases", totalNewCases); 
 
         log.info("Total Reported Cases = {}", totalReportedCases);
-        return "home"; // Assuming you have a "home.html" template
+        return "home";
     }
 }
