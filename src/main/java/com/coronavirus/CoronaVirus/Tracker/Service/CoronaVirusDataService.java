@@ -34,11 +34,11 @@ public class CoronaVirusDataService {
             if (locationStats != null) {
                 allStats = Arrays.asList(locationStats);
             }
-            log.info("location length", locationStats.length);
+            log.info("total loc size", locationStats.size());
         } catch (Exception e) {
             e.printStackTrace();
-            log.error("Exception occurred = {}", e.printstacktrace);
             throw new RuntimeException("Error occurred while fetching data from tracker");
         }
+        return;
     }
 }
