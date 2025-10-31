@@ -13,4 +13,9 @@ public class RestTemplateConfig {
         return new RestTemplateBuilder().build();
     }
 
+    @Bean
+    public ObjectMapper getRestTemplate() {
+        return new ObjectMapper();
+    }
+
 }
