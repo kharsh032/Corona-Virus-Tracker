@@ -42,5 +42,6 @@ public class HomeControllerTest {
         Model model = Mockito.mock(Model.class);
        String op = homeController.home(model);
         assertEquals("home", op);
+          assertEquals(1, mockStats.size());
     }
 }
