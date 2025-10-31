@@ -5,6 +5,7 @@ import lombok.*;
 @Builder
 @Data
 @AllArgsConstructor
+@ToString
 public class LocationStat {
     private String state;
     private String country;
@@ -12,4 +13,5 @@ public class LocationStat {
     private int recoveredCases;
     private int currentActiveCases;
     private int deathCases;
+    private int totalDeathCount;
 }
