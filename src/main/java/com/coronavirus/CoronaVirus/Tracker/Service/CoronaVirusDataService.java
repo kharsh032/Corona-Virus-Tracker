@@ -34,8 +34,10 @@ public class CoronaVirusDataService {
             if (locationStats != null) {
                 allStats = Arrays.asList(locationStats);
             }
+            log.info("location length", locationStats.length);
         } catch (Exception e) {
-            log.error("Exception occurred = {}", e);
+            e.printStackTrace();
+            log.error("Exception occurred = {}", e.printstacktrace);
             throw new RuntimeException("Error occurred while fetching data from tracker");
         }
     }
